@@ -9,8 +9,8 @@ def get_birthdays_per_week(list_birthdays : list):
     list_birthdays = {}
     #Формуємо один словник з днем тижня для кожної дати, 
     #другий для кожного дня тижня, щоб додавати співробітників
-    for add_years in range(7):
-        day_congrat = start_congrat + timedelta(days = add_years)
+    for add_days in range(7):
+        day_congrat = start_congrat + timedelta(days = add_days)
         if day_congrat.weekday() in (5, 6):
             dayofweek_birthdays[day_congrat] = datetime.strftime(day_congrat + timedelta(days = (7 - day_congrat.weekday())), '%A')
         else:
